@@ -1,0 +1,42 @@
+name: 补充一道问题
+description: 提出真实 AI 开发场景，作为后续问答选题
+title: '[选题] '
+body:
+  - type: markdown
+    attributes:
+      value: 请勿上传密钥、用户隐私、公司原始文档或未脱敏日志。Issue 不会自动发布为答案。
+  - type: dropdown
+    id: category
+    attributes:
+      label: 主题
+      options:
+        - 模型与提示词
+        - RAG 与知识检索
+        - 工具调用与 MCP
+        - Agent 与工作流
+        - 记忆与上下文
+        - 多模态
+        - 评测与排障
+        - 性能与成本
+        - 安全与权限
+        - 生产部署
+    validations:
+      required: true
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 实际场景与问题
+      description: 想实现什么，遇到了什么现象，有哪些约束？
+    validations:
+      required: true
+  - type: textarea
+    id: attempted
+    attributes:
+      label: 尝试过的方法与依据
+      description: 可附脱敏最小复现、版本和公开资料链接。
+  - type: textarea
+    id: expectation
+    attributes:
+      label: 希望答案解决什么
+    validations:
+      required: true

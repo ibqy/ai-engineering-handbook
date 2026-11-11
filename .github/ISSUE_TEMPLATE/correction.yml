@@ -1,0 +1,21 @@
+name: 修正一篇问答
+description: 反馈内容错误、失效引用或适用范围变化
+title: '[纠错] '
+body:
+  - type: input
+    id: article
+    attributes:
+      label: 问题编号或页面链接
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: 问题与建议修正
+      description: 请提供公开证据或脱敏的最小复现，不要上传凭据或私有业务数据。
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 相关版本或 commit
