@@ -15,7 +15,8 @@ concurrency:
 
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    # Playwright 1.58 无法在 ubuntu-latest(26.04) 镜像安装系统依赖
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
         with:
